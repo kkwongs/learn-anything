@@ -14,7 +14,7 @@
 - Graph
 
 ## Array vs Linked List
-
+선형 자료구조
 ### Array
 
 논리적 저장 순서와 물리적 저장 순서가 같아서 인덱스로 해당 원소에 접근할 수 있다. 따라서 찾고자 하는 원소의 인덱스를 알고 있으면 O(1)로 접근할 수 있다.
@@ -30,10 +30,12 @@ Array의 삭제와 삽입에 대한 문제를 해결하기 위한 자료구조�
 결국 Linked List는 Search, 삭제, 삽입에 대해서 O(n)의 시간복잡도를 갖는다. Array보다 좋지 않은 시간복잡도를 가짐에도 불구하고 Linked List는 Tree 구조의 근간이 되는 자료구조이며, Tree에서 사용되었을 때 유용성이 드러나기 때문에 우리가 학습하는 것이다.
 
 ## Stack & Queue
-
+선형 자료구조
 ### Stack
+Last In First Out(LIFO) - 나중에 들어간 원소가 먼저 나온다. 또는 First In Last Out(FILO) - 먼저 드어간 원소가 나중에 나온다. 이것이 Stack의 가장 큰 특징이다.
 
 ### Queue
+First In First Out(FIFO) - 먼저 들어간 원소가 먼저 나온다. Stack과는 반대로 먼저 들어간 원소가 맨 앞에서 대기하고 있다가 먼저 나오게 되는 구조이다.
 
 ## Tree
 
