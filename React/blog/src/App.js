@@ -22,12 +22,22 @@ function App() {
     setTitle(list);
   }
 
+  function sortByTitleList() {
+    const list = [...titleList];
+    list.sort((a, b) => (a < b ? -1 : a == b ? 0 : 1));
+    setTitle(list);
+  }
+
   return (
     <div className="App">
       <div className="black-nav">
         <h4>ReactBlog</h4>
       </div>
-      <span onClick={updateTitle}>😉</span>
+
+      <button onClick={sortByTitleList}>가나다순 정렬</button>
+
+      <button onClick={updateTitle}>글 수정</button>
+
       {titleList.map((title, index) => (
         <div className="list" key={index}>
           <h4>
