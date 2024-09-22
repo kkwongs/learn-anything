@@ -81,3 +81,33 @@ function App() {
 
 1. state는 등호로 변경 금지
 2. state 변경 함수(새로운 state)
+
+- (참고) array/object 다룰 때 원본은 보존하는 게 좋음
+
+```jsx
+let [state, setState] = useState([1, 2, 3]);
+function updateState() {
+  // 1. 원본이 해손 됨.
+  // state[0] = 4;
+  // setState(state);
+
+  // 2. state가 변경되지 않음.
+  // let copy = state;
+  // copy[0] = 4;
+  // setState(copy);
+
+  // state 변경 함수의 특징으로
+  // 기존state == 변경state 의 경우 변경 안 해주는데
+
+  // array/object 특징으로
+  // array/object는 reference data type이라 화살표만 저장함.
+  // copy[0] = 4; 라고 하면 변수는 변경됐지만
+  // 변수에 있던 화살표가 변경된 것은 아니기 때문에
+  // 기존state == 변경state 값이 true임.
+  // 따라서 Spread syntax (...) 사용해야 됨.
+
+  let copy = [...state];
+  copy[0] = 4;
+  setState(copy);
+}
+```
