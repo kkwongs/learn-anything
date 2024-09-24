@@ -111,3 +111,11 @@ function updateState() {
   setState(copy);
 }
 ```
+
+## component
+
+### 언제 쓸까?
+
+1. 반복적인 html 축약할 때
+2. 큰 페이지들
+3. 자주 변경되는 것들

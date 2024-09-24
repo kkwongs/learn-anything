@@ -46,8 +46,30 @@ function App() {
           <p>2월 17일 발행</p>
         </div>
       ))}
+
+      <Modal></Modal>
     </div>
   );
 }
+
+const Modal = () => {
+  return (
+    <div className="modal">
+      <h4>제목</h4>
+      <p>날짜</p>
+      <p>상세내용</p>
+    </div>
+  );
+};
+
+// function Modal() {
+//   return (
+//     <div className="modal">
+//       <h4>제목</h4>
+//       <p>날짜</p>
+//       <p>상세내용</p>
+//     </div>
+//   );
+// }
 
 export default App;
